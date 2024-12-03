@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Variables para colores */
+:root{
+    --primary-bg: #565454;
+    --primary-color: #FFF;
+    --secondary-color: #817C7C;
+    --accent-color: #21ABC5;
+}
+/* Reseteo global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos generales */
+body {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.3em;
+    color: var(--secondary-color);
+    background-color: #f9f9f9;
+}
+.container {
+    width: 70%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header {
+    width: 100%;
+    background: var(--primary-bg);
+    color: var(--primary-color);
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+}
+header .header-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+header img{
+    width: 120px;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+header h1{
+    font-size: 1.5em;
+    margin: 0;
+}
+header h2{
+    font-size: 1em;
+    font-weight: lighter;
+    margin: 0;
+}
+article{
+    padding: 40px 0 20px 0;
+    border-bottom: dotted 1px #888282;
+}
+article h2{
+    float: left;
+    text-transform: uppercase;
+    font-size: 1em;
+    border-bottom: solid 2px var(--accent-color);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+article p, article ul, article h3{
+    margin-left: 20%;
+    font-family: inherit;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+article h3{
+    font-size: 1.2em;
+}
+ul{
+    list-style-type: square;
+    padding-left: 20px;
+}
+footer{
+    margin-top: 2em;
+    padding: 2em;
+    width: 100%;
+    background: var(--primary-bg);
+    color: var(--primary-color);
+}
+footer p{
+    text-align: center;
+}
+footer a:link, footer a:visited{
+    color: var(--primary-color);
+}
+footer a:hover{
+    text-decoration: none;
+}
+footer a:focus{
+    outline: 2px solid var(--accent-color);
+}
+/* Responsividad */
+@media (max-width: 768px){
+    .container{
+        width: 90%;
+    }
+    article p,
+    article ul,
+    article h3{
+        margin-left: 0;
+    }
+    article h2{
+        float: none;
+        text-align: center;
+        display: inline-block;
+    }
+    header .header-content{
+        flex-direction: column;
+    }
+}
